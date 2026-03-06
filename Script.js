@@ -1,6 +1,7 @@
 const audio = document.getElementById("audio")
 const playBtn = document.getElementById("playBtn")
 const progress = document.getElementById("progress")
+const time = document.getElementById("time")
 
 playBtn.onclick = () => {
 
@@ -19,15 +20,16 @@ audio.addEventListener("timeupdate",()=>{
 let percent = (audio.currentTime / audio.duration) * 100
 progress.style.width = percent + "%"
 
+let minutes = Math.floor(audio.currentTime / 60)
+let seconds = Math.floor(audio.currentTime % 60)
+
+if(seconds < 10){
+seconds = "0"+seconds
+}
+
+time.innerText = minutes + ":" + seconds
+
 })
-
-document.body.onkeyup = function(e){
-
-if(e.code=="Space"){
-playBtn.click()
-}
-
-}
 
 const images = [
 "foto1.jpg",
