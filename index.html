@@ -1,102 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
 <meta charset="UTF-8">
-<title>Adryano ❤️ Edilaine</title>
+<title>Nossa História ❤️</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
-background:linear-gradient(#0a0f2c,#000);
+font-family:Arial, Helvetica, sans-serif;
+background:#070b1a;
 color:white;
 text-align:center;
-overflow-x:hidden;
 }
 
 h1{
-margin-top:30px;
-font-size:32px;
-}
-
-.sub{
-opacity:0.8;
-margin-bottom:20px;
-}
-
-.foto{
-width:90%;
-max-width:420px;
-border-radius:20px;
-box-shadow:0 0 20px rgba(255,255,255,0.2);
-margin-bottom:20px;
-}
-
-.contador{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-width:90%;
-max-width:420px;
-margin:auto;
-}
-
-.caixa{
-background:#111;
-padding:20px;
-border-radius:15px;
-font-size:20px;
-}
-
-audio{
 margin-top:20px;
 }
 
-.mensagem{
-background:#b00000;
-margin:40px 20px;
-padding:25px;
+.container{
+max-width:700px;
+margin:auto;
+padding:20px;
+}
+
+/* música */
+
+.music{
+margin-top:10px;
+}
+
+/* slider de fotos */
+
+.slider{
+margin-top:20px;
+}
+
+.slider img{
+width:100%;
 border-radius:15px;
-font-size:18px;
+box-shadow:0 0 20px rgba(255,255,255,0.15);
+}
+
+/* contador */
+
+.counter{
+margin-top:25px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px;
+}
+
+.box{
+background:#111;
+padding:15px;
+border-radius:10px;
+}
+
+.number{
+font-size:22px;
+font-weight:bold;
+}
+
+/* sobre casal */
+
+.about{
+margin-top:40px;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+/* mensagem */
+
+.message{
+background:#a30000;
+padding:20px;
+border-radius:12px;
+margin-top:20px;
 line-height:1.7;
 text-align:left;
 }
 
 button{
 margin-top:10px;
-padding:10px 20px;
+padding:10px 18px;
 border:none;
-border-radius:10px;
+border-radius:8px;
 background:white;
 cursor:pointer;
-font-size:16px;
-}
-
-.galeria{
-margin-top:30px;
-}
-
-.galeria img{
-width:90%;
-max-width:420px;
-border-radius:20px;
-box-shadow:0 0 15px rgba(255,255,255,0.2);
-}
-
-.heart{
-position:fixed;
-top:-10px;
-font-size:22px;
-animation:fall linear forwards;
-}
-
-@keyframes fall{
-to{
-transform:translateY(110vh);
-opacity:0;
-}
+font-size:15px;
 }
 
 </style>
@@ -104,55 +100,72 @@ opacity:0;
 
 <body>
 
+<div class="container">
+
 <h1>Adryano ❤️ Edilaine</h1>
-<div class="sub">Juntos desde 2024</div>
 
-<img src="foto1.jpg" class="foto">
-
-<div class="contador">
-
-<div class="caixa">
-<div id="anos"></div>
-Anos
-</div>
-
-<div class="caixa">
-<div id="meses"></div>
-Meses
-</div>
-
-<div class="caixa">
-<div id="dias"></div>
-Dias
-</div>
-
-<div class="caixa">
-<div id="horas"></div>
-Horas
-</div>
-
-<div class="caixa">
-<div id="minutos"></div>
-Minutos
-</div>
-
-<div class="caixa">
-<div id="segundos"></div>
-Segundos
-</div>
-
-</div>
-
-<audio autoplay loop controls>
-<source src="musica.mp3" type="audio/mp3">
+<!-- música -->
+<div class="music">
+<audio controls autoplay loop>
+<source src="ladygaga.mp3" type="audio/mpeg">
 </audio>
+</div>
 
-<div class="mensagem">
+<!-- fotos que trocam -->
+<div class="slider">
+<img id="slide" src="foto1.jpg">
+</div>
 
-<h2>Mensagem especial</h2>
+<!-- contador -->
+
+<div class="counter">
+
+<div class="box">
+<div class="number" id="anos"></div>
+anos
+</div>
+
+<div class="box">
+<div class="number" id="meses"></div>
+meses
+</div>
+
+<div class="box">
+<div class="number" id="dias"></div>
+dias
+</div>
+
+<div class="box">
+<div class="number" id="horas"></div>
+horas
+</div>
+
+<div class="box">
+<div class="number" id="minutos"></div>
+minutos
+</div>
+
+<div class="box">
+<div class="number" id="segundos"></div>
+segundos
+</div>
+
+</div>
+
+<!-- sobre o casal -->
+
+<div class="about">
+
+<h2>Sobre o casal</h2>
+
+<img src="foto_sobre.jpg">
+
+<div class="message">
 
 <p id="textoCurto">
+
 Desde que você entrou na minha vida, algo dentro de mim mudou de um jeito que eu nunca imaginei 🥹🤍✨ Antes de você, muitos dias pareciam apenas dias comuns… dias que passavam sem eu perceber tanta beleza nas coisas. Mas depois que você apareceu, tudo ficou diferente… tudo ganhou mais cor, mais sentido, mais vida 🥰🤍✨
+
 </p>
 
 <p id="textoCompleto" style="display:none;">
@@ -163,55 +176,19 @@ Hoje eu percebo que quando penso em algo realmente especial na minha vida… eu 
 
 Às vezes eu paro por um momento, em silêncio, e começo a pensar em nós dois… nas nossas conversas, nos momentos simples, nas coisas que vivemos juntos… e meu coração fica cheio de um sentimento tão forte que é difícil até colocar em palavras 🥹🤍✨
 
-É como se amar você tivesse se tornado uma das coisas mais naturais da minha vida… como respirar… como sentir o coração bater dentro do peito 🥹🤍❤️ Simplesmente acontece… e acontece cada dia mais forte 🥰🤍😍
+É como se amar você tivesse se tornado uma das coisas mais naturais da minha vida… como respirar… como sentir o coração bater dentro do peito 🥹🤍❤️
 
-Você é uma mulher incrível… de verdade 🥹🤍✨ Seu coração é lindo, seu jeito é lindo, sua forma de se preocupar com as pessoas é linda 🥰🤍💫 Você tem algo raro dentro de você… algo que poucas pessoas têm… uma luz, um brilho especial que faz qualquer lugar ficar melhor só porque você está ali 🥹🤍✨
+Você é uma mulher incrível… de verdade 🥹🤍✨ Seu coração é lindo, seu jeito é lindo, sua forma de se preocupar com as pessoas é linda 🥰🤍💫
 
-E às vezes eu fico olhando para você, ou simplesmente pensando em você… e me pergunto como alguém pode ser tão especial assim 🥹🤍🥰
+Seu sorriso… ah, o seu sorriso… 🥹🤍✨ Ele tem um poder enorme sobre mim.
 
-Seu sorriso… ah, o seu sorriso… 🥹🤍✨ Ele tem um poder enorme sobre mim. Quando você sorri, parece que o mundo inteiro fica mais leve. Parece que todos os problemas ficam menores, como se naquele momento nada mais importasse além de ver você feliz 🥰🤍😍
-
-Seu olhar tem algo que mexe comigo de um jeito profundo… algo que me acalma, que me faz sentir paz… e ao mesmo tempo faz nascer um amor gigante dentro do meu coração 🥹🤍❤️
-
-Eu amo cada detalhe seu… cada pedacinho de quem você é 🥰🤍✨ Amo o seu jeito de falar, amo quando você me conta coisas do seu dia, amo quando você demonstra carinho de um jeito simples… mas que para mim significa tudo 🥹🤍
-
-São essas pequenas coisas… esses pequenos momentos… que fazem eu perceber cada vez mais o quanto você é importante na minha vida 🥰🤍✨
-
-Às vezes eu também fico pensando em como a vida é cheia de caminhos diferentes… tantas pessoas no mundo… tantas histórias possíveis… e mesmo assim, em algum momento, nossos caminhos se cruzaram 🥹🤍✨
+Eu amo cada detalhe seu… cada pedacinho de quem você é 🥰🤍✨
 
 E de todas as pessoas que poderiam aparecer na minha vida… foi você 🤍🥹
-
-E isso para mim é um presente tão grande… tão especial… que eu nunca vou deixar de agradecer por ter você comigo 🥰🤍✨
-
-Quero que você saiba de uma coisa muito importante… 🥹🤍
-
-Se algum dia você se sentir insegura… se algum dia achar que não é suficiente… se algum dia o mundo parecer pesado demais… lembra disso 🤍🥺
-
-Você é uma mulher maravilhosa… forte… linda… especial… com um coração enorme e cheio de amor 🥹🤍✨
-
-Você tem um valor imenso… muito maior do que talvez você mesma consiga enxergar às vezes 🥰🤍
-
-E eu quero estar ao seu lado em todos os momentos da vida… nos dias felizes, nas conquistas, nas risadas… nas lembranças bonitas que ainda vamos criar juntos 🥹🤍✨
-
-Mas também quero estar ao seu lado nos dias difíceis… quando você precisar de um abraço… quando precisar de alguém para te apoiar… quando precisar de alguém que te lembre o quanto você é amada 🥺🤍
-
-Porque a verdade é simples… e vem do fundo do meu coração… 🥹🤍❤️
 
 Eu amo você.
 
 Amo muito… mais do que qualquer texto consegue explicar 🥰🤍😍
-
-Você é uma das coisas mais lindas que já aconteceram na minha vida 🥹🤍✨
-
-E ter você comigo… é uma das maiores felicidades que meu coração já sentiu 🤍🥹🥰
-
-E mesmo quando o mundo parece silencioso ou confuso, pensar em você traz paz para o meu coração 🥹🤍✨ É como se sua presença iluminasse até os momentos mais simples da vida. Só de saber que você existe, que você faz parte da minha história, já faz tudo valer mais a pena 🥰🤍
-
-Quero continuar criando memórias com você… momentos que vamos lembrar no futuro e sorrir juntos 🥹🤍✨ Momentos simples, conversas longas, risadas inesperadas… porque cada segundo ao seu lado se torna algo especial para mim 🤍🥰
-
-E quanto mais o tempo passa, mais eu percebo que amar você não é apenas um sentimento… é uma escolha linda que meu coração faz todos os dias 🥹🤍❤️ Escolher cuidar de você, escolher te valorizar, escolher estar ao seu lado em todos os momentos.
-
-Porque você merece um amor verdadeiro… um amor que te respeite, que te admire e que nunca deixe você esquecer o quão incrível você é 🥰🤍✨
 
 E eu prometo sempre tentar ser esse amor para você… hoje, amanhã e em todos os dias que ainda virão 🥹🤍😍
 
@@ -221,15 +198,13 @@ E eu prometo sempre tentar ser esse amor para você… hoje, amanhã e em todos 
 
 </div>
 
-<div class="galeria">
-
-<h2>Nossos momentos 📸</h2>
-
-<img id="slide" src="foto1.jpg">
+</div>
 
 </div>
 
 <script>
+
+/* contador */
 
 const inicio = new Date("2024-09-06 00:00:00");
 
@@ -238,70 +213,61 @@ function atualizar(){
 const agora = new Date();
 const diff = agora - inicio;
 
-document.getElementById("anos").innerHTML = Math.floor(diff/31536000000);
-document.getElementById("meses").innerHTML = Math.floor(diff/2592000000)%12;
-document.getElementById("dias").innerHTML = Math.floor(diff/86400000)%30;
-document.getElementById("horas").innerHTML = Math.floor(diff/3600000)%24;
-document.getElementById("minutos").innerHTML = Math.floor(diff/60000)%60;
-document.getElementById("segundos").innerHTML = Math.floor(diff/1000)%60;
+document.getElementById("anos").innerText = Math.floor(diff/31536000000);
+document.getElementById("meses").innerText = Math.floor(diff/2592000000)%12;
+document.getElementById("dias").innerText = Math.floor(diff/86400000)%30;
+document.getElementById("horas").innerText = Math.floor(diff/3600000)%24;
+document.getElementById("minutos").innerText = Math.floor(diff/60000)%60;
+document.getElementById("segundos").innerText = Math.floor(diff/1000)%60;
 
 }
 
 setInterval(atualizar,1000);
 
+/* botão ler mais */
+
 function lerMais(){
 
-var curto = document.getElementById("textoCurto");
-var completo = document.getElementById("textoCompleto");
-var botao = document.getElementById("botao");
+let curto = document.getElementById("textoCurto");
+let completo = document.getElementById("textoCompleto");
+let botao = document.getElementById("botao");
 
 if(completo.style.display === "none"){
-completo.style.display = "block";
-curto.style.display = "none";
-botao.innerText = "Mostrar menos";
+completo.style.display="block";
+curto.style.display="none";
+botao.innerText="Mostrar menos";
 }else{
-completo.style.display = "none";
-curto.style.display = "block";
-botao.innerText = "Continuar lendo";
+completo.style.display="none";
+curto.style.display="block";
+botao.innerText="Continuar lendo";
 }
 
 }
 
-const fotos = [
+/* slider 6 fotos */
+
+const fotos=[
 "foto1.jpg",
 "foto2.jpg",
-"foto3.jpg"
+"foto3.jpg",
+"foto4.jpg",
+"foto5.jpg",
+"foto6.jpg"
 ];
 
 let i=0;
 
 setInterval(()=>{
+
 i++;
+
 if(i>=fotos.length){
 i=0;
 }
+
 document.getElementById("slide").src=fotos[i];
-},4000);
 
-function heart(){
-
-const heart = document.createElement("div");
-heart.classList.add("heart");
-
-heart.innerHTML="🤍";
-
-heart.style.left=Math.random()*100+"vw";
-heart.style.animationDuration=Math.random()*3+2+"s";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.remove();
 },5000);
-
-}
-
-setInterval(heart,300);
 
 </script>
 
