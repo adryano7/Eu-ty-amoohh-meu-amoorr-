@@ -2,274 +2,120 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Nossa História ❤️</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#070b1a;
-color:white;
-text-align:center;
-}
-
-h1{
-margin-top:20px;
-}
-
-.container{
-max-width:700px;
-margin:auto;
-padding:20px;
-}
-
-/* música */
-
-.music{
-margin-top:10px;
-}
-
-/* slider de fotos */
-
-.slider{
-margin-top:20px;
-}
-
-.slider img{
-width:100%;
-border-radius:15px;
-box-shadow:0 0 20px rgba(255,255,255,0.15);
-}
-
-/* contador */
-
-.counter{
-margin-top:25px;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-}
-
-.box{
-background:#111;
-padding:15px;
-border-radius:10px;
-}
-
-.number{
-font-size:22px;
-font-weight:bold;
-}
-
-/* sobre casal */
-
-.about{
-margin-top:40px;
-}
-
-.about img{
-width:100%;
-border-radius:15px;
-margin-bottom:15px;
-}
-
-/* mensagem */
-
-.message{
-background:#a30000;
-padding:20px;
-border-radius:12px;
-margin-top:20px;
-line-height:1.7;
-text-align:left;
-}
-
-button{
-margin-top:10px;
-padding:10px 18px;
-border:none;
-border-radius:8px;
-background:white;
-cursor:pointer;
-font-size:15px;
-}
-
-</style>
+<title>Bruno Marx</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
-
-<h1>Adryano ❤️ Edilaine</h1>
-
-<!-- música -->
-<div class="music">
-<audio controls autoplay loop>
-<source src="ladygaga.mp3" type="audio/mpeg">
-</audio>
+<div id="intro">
+<h1>Bruno Marx</h1>
 </div>
 
-<!-- fotos que trocam -->
-<div class="slider">
+<div class="container">
+
+<div class="carousel">
 <img id="slide" src="foto1.jpg">
 </div>
 
-<!-- contador -->
+<h2>Bruno Marx</h2>
+<p class="music-name">Minha Música</p>
 
-<div class="counter">
+<div class="player">
 
-<div class="box">
-<div class="number" id="anos"></div>
-anos
+<button id="playBtn">▶</button>
+
+<div class="progress-container">
+<div class="progress" id="progress"></div>
 </div>
 
-<div class="box">
-<div class="number" id="meses"></div>
-meses
-</div>
-
-<div class="box">
-<div class="number" id="dias"></div>
-dias
-</div>
-
-<div class="box">
-<div class="number" id="horas"></div>
-horas
-</div>
-
-<div class="box">
-<div class="number" id="minutos"></div>
-minutos
-</div>
-
-<div class="box">
-<div class="number" id="segundos"></div>
-segundos
-</div>
+<span id="time">0:00</span>
 
 </div>
 
-<!-- sobre o casal -->
+<audio id="audio" src="musica.mp3"></audio>
 
-<div class="about">
+<div class="texto">
 
-<h2>Sobre o casal</h2>
-
-<img src="foto_sobre.jpg">
-
-<div class="message">
-
-<p id="textoCurto">
-
+<p>
 Desde que você entrou na minha vida, algo dentro de mim mudou de um jeito que eu nunca imaginei 🥹🤍✨ Antes de você, muitos dias pareciam apenas dias comuns… dias que passavam sem eu perceber tanta beleza nas coisas. Mas depois que você apareceu, tudo ficou diferente… tudo ganhou mais cor, mais sentido, mais vida 🥰🤍✨
-
 </p>
 
-<p id="textoCompleto" style="display:none;">
-
-Desde que você entrou na minha vida, algo dentro de mim mudou de um jeito que eu nunca imaginei 🥹🤍✨ Antes de você, muitos dias pareciam apenas dias comuns… dias que passavam sem eu perceber tanta beleza nas coisas. Mas depois que você apareceu, tudo ficou diferente… tudo ganhou mais cor, mais sentido, mais vida 🥰🤍✨
-
+<p>
 Hoje eu percebo que quando penso em algo realmente especial na minha vida… eu penso em você 🥹🤍😍
-
 Às vezes eu paro por um momento, em silêncio, e começo a pensar em nós dois… nas nossas conversas, nos momentos simples, nas coisas que vivemos juntos… e meu coração fica cheio de um sentimento tão forte que é difícil até colocar em palavras 🥹🤍✨
-
-É como se amar você tivesse se tornado uma das coisas mais naturais da minha vida… como respirar… como sentir o coração bater dentro do peito 🥹🤍❤️
-
-Você é uma mulher incrível… de verdade 🥹🤍✨ Seu coração é lindo, seu jeito é lindo, sua forma de se preocupar com as pessoas é linda 🥰🤍💫
-
-Seu sorriso… ah, o seu sorriso… 🥹🤍✨ Ele tem um poder enorme sobre mim.
-
-Eu amo cada detalhe seu… cada pedacinho de quem você é 🥰🤍✨
-
-E de todas as pessoas que poderiam aparecer na minha vida… foi você 🤍🥹
-
-Eu amo você.
-
-Amo muito… mais do que qualquer texto consegue explicar 🥰🤍😍
-
-E eu prometo sempre tentar ser esse amor para você… hoje, amanhã e em todos os dias que ainda virão 🥹🤍😍
-
 </p>
 
-<button onclick="lerMais()" id="botao">Continuar lendo</button>
+<p>
+É como se amar você tivesse se tornado uma das coisas mais naturais da minha vida… como respirar… como sentir o coração bater dentro do peito 🥹🤍❤️ Simplesmente acontece… e acontece cada dia mais forte 🥰🤍😍
+</p>
+
+<p>
+Você é uma mulher incrível… de verdade 🥹🤍✨ Seu coração é lindo, seu jeito é lindo, sua forma de se preocupar com as pessoas é linda 🥰🤍💫
+</p>
+
+<p>
+Seu sorriso… ah, o seu sorriso… 🥹🤍✨ Ele tem um poder enorme sobre mim. Quando você sorri, parece que o mundo inteiro fica mais leve.
+</p>
+
+<p>
+Eu amo cada detalhe seu… cada pedacinho de quem você é 🥰🤍✨
+</p>
+
+<p>
+Às vezes eu também fico pensando em como a vida é cheia de caminhos diferentes… tantas pessoas no mundo… tantas histórias possíveis… e mesmo assim, em algum momento, nossos caminhos se cruzaram 🥹🤍✨
+</p>
+
+<p>
+E de todas as pessoas que poderiam aparecer na minha vida… foi você 🤍🥹
+</p>
+
+<p>
+E isso para mim é um presente tão grande… tão especial… que eu nunca vou deixar de agradecer por ter você comigo 🥰🤍✨
+</p>
+
+<p>
+Se algum dia você se sentir insegura… lembra disso 🤍🥺
+Você é uma mulher maravilhosa… forte… linda… especial… com um coração enorme e cheio de amor 🥹🤍✨
+</p>
+
+<p>
+Porque a verdade é simples… e vem do fundo do meu coração… 🥹🤍❤️
+</p>
+
+<p>
+Eu amo você.
+</p>
+
+<p>
+Amo muito… mais do que qualquer texto consegue explicar 🥰🤍😍
+</p>
+
+<p>
+Você é uma das coisas mais lindas que já aconteceram na minha vida 🥹🤍✨
+</p>
+
+<p>
+E ter você comigo… é uma das maiores felicidades que meu coração já sentiu 🤍🥹🥰
+</p>
+
+<p>
+Quero continuar criando memórias com você… momentos que vamos lembrar no futuro e sorrir juntos 🥹🤍✨
+</p>
+
+<p>
+Porque você merece um amor verdadeiro… um amor que te respeite, que te admire e que nunca deixe você esquecer o quão incrível você é 🥰🤍✨
+</p>
+
+<p>
+E eu prometo sempre tentar ser esse amor para você… hoje, amanhã e em todos os dias que ainda virão 🥹🤍😍
+</p>
 
 </div>
 
 </div>
 
-</div>
-
-<script>
-
-/* contador */
-
-const inicio = new Date("2024-09-06 00:00:00");
-
-function atualizar(){
-
-const agora = new Date();
-const diff = agora - inicio;
-
-document.getElementById("anos").innerText = Math.floor(diff/31536000000);
-document.getElementById("meses").innerText = Math.floor(diff/2592000000)%12;
-document.getElementById("dias").innerText = Math.floor(diff/86400000)%30;
-document.getElementById("horas").innerText = Math.floor(diff/3600000)%24;
-document.getElementById("minutos").innerText = Math.floor(diff/60000)%60;
-document.getElementById("segundos").innerText = Math.floor(diff/1000)%60;
-
-}
-
-setInterval(atualizar,1000);
-
-/* botão ler mais */
-
-function lerMais(){
-
-let curto = document.getElementById("textoCurto");
-let completo = document.getElementById("textoCompleto");
-let botao = document.getElementById("botao");
-
-if(completo.style.display === "none"){
-completo.style.display="block";
-curto.style.display="none";
-botao.innerText="Mostrar menos";
-}else{
-completo.style.display="none";
-curto.style.display="block";
-botao.innerText="Continuar lendo";
-}
-
-}
-
-/* slider 6 fotos */
-
-const fotos=[
-"foto1.jpg",
-"foto2.jpg",
-"foto3.jpg",
-"foto4.jpg",
-"foto5.jpg",
-"foto6.jpg"
-];
-
-let i=0;
-
-setInterval(()=>{
-
-i++;
-
-if(i>=fotos.length){
-i=0;
-}
-
-document.getElementById("slide").src=fotos[i];
-
-},5000);
-
-</script>
+<script src="script.js"></script>
 
 </body>
-  </html>
+</html>
